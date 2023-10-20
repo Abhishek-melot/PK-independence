@@ -1,0 +1,292 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-image: url(/assets/BG.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    min-height: 185vh;
+    position: relative;
+}
+header{
+    /* background-image: url("assets/Header.png"); */
+    /* height: 52vh; */
+    /* background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat; */
+    position: relative;
+}
+.header-img{
+    width: 100%;
+}
+
+.guide-button{
+    position: fixed;
+    border: 0;
+    outline: none;
+    background: none;
+    width: 20%;
+    height: 20px;
+    top: 40%;
+    right: 0;
+}
+.guide-button img{
+    width: 100%;
+}
+
+/* ---- Modal UI ---- */
+
+#modal{
+    /* padding: 3rem;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    max-width: 210px; */
+    /* background: url('assets/HTP\ BG.png');
+    background-size: cover;
+    background-repeat: no-repeat; */
+    border: 0;
+    background: transparent;
+    width: 100%;
+    margin: auto;
+}  
+
+
+ .close{
+    right: 12px;
+    background: none;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    width: 50px;
+    top: -4px;
+}
+.close img{
+    width: 100%;
+} 
+
+::backdrop {
+    background-color: #232323;
+    opacity: 0.75;
+  }
+
+.howToPlay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('assets/HTP\ BG.png');
+    background-size: 100% 100%;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    gap: 16px;
+
+}
+.howToPlay img{
+    width: 40%;
+}
+.howToPlay ul{
+    max-width: 245px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+
+/* ----- Modal UI ends ----- */
+
+/* ----Main content----- */
+
+
+/* main{
+    background-image: url('/assets/BG.jpg');
+    background-position: center center;
+    background-size: 100% 100%;
+    min-height: 100%;
+} */
+
+button{
+    background: none;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+
+}
+.tab-btns-section{
+    padding-top: 4vw ;
+}
+.tab-btns{
+    display:flex;
+    justify-content: center;
+    gap: 42px;
+    padding-bottom: 5vh;
+}
+
+.talent{
+    background-image: url('./assets/Talent\ button\ unselected.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 45px;
+    width: 30%;
+}
+
+.user{
+    background-image: url('./assets/users\ Button.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    height: 45px;
+    width: 30%;
+}
+.talent.active{
+    background-image: url('./assets/Talent\ button.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 45px;
+    width: 30%;
+}
+.user.active{
+    background-image: url('./assets/users\ Button\ selected.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 45px;
+    width: 30%;
+}
+.tab-content,.tab-schedule-content{
+    display: none;
+    
+}
+
+.tab-content.active,.tab-schedule-content.active{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/Rewards\ BG.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    max-height: 300px;
+    height: 50vh;  
+}
+
+.rewards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.stage{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stage img{
+    width: 100%;
+}
+.stage .audio{
+    max-width: 45px;
+}
+.arrow{
+    max-width: 30px;
+    margin-bottom: 60px;
+}
+.arrow img{
+    width: 100%;
+}
+
+.rewards .stage:nth-child(3){
+    margin: 0 8px;
+}
+
+.stage span{
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight:600;
+    min-width: 90px;
+}
+
+/* ---- Scehdule section ---- */
+
+.dancing{
+    background-image: url('./assets/PK\ Dancing\ battle\ unselected.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 45px;
+    width: 40%;
+}
+.singing{
+    background-image: url('./assets/PK\ singing\ battle\ unselected.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 45px;
+    width: 40%;
+}
+.singing.active{
+    background-image: url('./assets/PK\ singing\ battle\ selected.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 45px;
+    width: 40%;
+}
+.dancing.active{
+    background-image: url('./assets/PK\ Dancing\ battle\ selected.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 45px;
+    width: 40%;
+}
+
+.tab-schedule-content{
+    display: none;
+}
+.schedule-section{
+    margin-top: 50px;
+}
+
+.schedule-grid{
+    border: 1px solid green;
+    border-radius: 12px;
+    max-width: 72%;
+    
+}
+
+.table-heading{
+    color: white;
+    background-color: darkgreen;
+    border: 1px goldenrod solid;
+    border-radius: 12px;
+    font-size: 15px !important;
+}
+.row{
+    grid-template-columns: repeat(5,1fr);
+    display: grid;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* gap: 20px; */
+    place-items: center;
+    border-bottom: 1px solid green;
+    font-size: 13px;
+}
+.row p{
+    text-align: center;
+    padding: 2px 0;
+}
+.versus{
+    max-width: 25px;
+}
+.versus img{
+    width: 100%;
+}
+footer{
+    margin-top: 300px;
+    text-align: center;
+}
+
