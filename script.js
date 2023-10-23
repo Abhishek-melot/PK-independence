@@ -59,6 +59,39 @@ tabs1.forEach((tab,i)=>{
     })  
 })
 
+// Carousel code
 
+let leftArrow=document.querySelector('.left');
+let rightArrow=document.querySelector('.right');
 
+let prizes=document.querySelectorAll('.prizes');
 
+rightArrow.addEventListener('click',()=>{
+
+    let currentPrize=document.querySelector('.prizes.active');
+    
+
+    if(currentPrize.nextElementSibling && currentPrize.nextElementSibling.classList.contains('prizes')){
+        console.log(currentPrize.nextElementSibling);
+        currentPrize.nextElementSibling.classList.add('active');
+    }else{
+
+        prizes[0].classList.add('active')
+    }
+    currentPrize.classList.remove('active');  
+})
+
+leftArrow.addEventListener('click',()=>{
+
+    let currentPrize=document.querySelector('.prizes.active');
+    
+
+    if(currentPrize.previousElementSibling && currentPrize.previousElementSibling.classList.contains('prizes')){
+        console.log(currentPrize.previousElementSibling);
+        currentPrize.previousElementSibling.classList.add('active');
+    }else{
+
+        prizes[prizes.length-1].classList.add('active')
+    }
+    currentPrize.classList.remove('active');  
+})
