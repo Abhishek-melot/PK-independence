@@ -66,6 +66,7 @@ let rightArrow=document.querySelector('.right');
 
 let prizes=document.querySelectorAll('.prizes');
 
+
 rightArrow.addEventListener('click',()=>{
 
     let currentPrize=document.querySelector('.prizes.active');
